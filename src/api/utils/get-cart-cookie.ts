@@ -12,7 +12,7 @@ export default function getCartCookie(
           expires: new Date(Date.now() + maxAge * 1000),
           secure: process.env.NODE_ENV === 'production',
           path: '/',
-          sameSite: 'lax',
+          sameSite: 'none',
         }
       : { maxAge: -1, path: '/' } // Removes the cookie
 
